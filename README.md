@@ -34,8 +34,8 @@ To install this plugin, you can use the following commands from the users home d
 
 ```bash
 cd ~
-git clone https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
-cd AFC-Klipper-Add-On
+git clone https://github.com/jackmiller1986/TurtlePulseCore-TPC.git
+cd TurtlePulseCore-TPC
 ./install-afc.sh
 ```
 
@@ -44,7 +44,7 @@ cd AFC-Klipper-Add-On
 To update the AFC plugin software, you can simply run the following command:
 
 ```bash
-cd AFC-Klipper-Add-On
+cd TurtlePulseCore-TPC
 ./install-afc.sh
 ```
 
@@ -79,17 +79,17 @@ To manually install and configure the plugin, you can use the following commands
 
 ```bash
 cd ~
-git clone https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+git clone https://github.com/jackmiller1986/TurtlePulseCore-TPC.git
 cd AFC-Klipper-Add-On
-ln -sf ~/AFC-Klipper-Add-On/extras/*.py ~/klipper/klippy/extras/
+ln -sf ~/TurtlePulseCore-TPC/extras/*.py ~/klipper/klippy/extras/
 mkdir -p ~/printer_data/config/AFC
-cp -R ~/AFC-Klipper-Add-On/config/* ~/printer_data/config/AFC/
+cp -R ~/TurtlePulseCore-TPC/config/* ~/printer_data/config/AFC/
 ```
 
-Next, please copy the appropriate `AFC_Hardware.cfg` template file from `~/AFC-Klipper-Add-On/templates` to `~/printer_data/config/AFC`
+Next, please copy the appropriate `AFC_Hardware.cfg` template file from `~/TurtlePulseCore-TPC/templates` to `~/printer_data/config/AFC`
 and modify the file to match your hardware configuration. Ensure you rename the file properly based on the selected board type to `AFC_Hardware.cfg`.
 
-You should also copy the `AFC_Turtle_1.cfg` template file from `~/AFC-Klipper-Add-On/templates` to `~/printer_data/config/AFC` and modify this file to match your hardware configuration.
+You should also copy the `AFC_Turtle_1.cfg` template file from `~/TurtlePulseCore-TPC/templates` to `~/printer_data/config/AFC` and modify this file to match your hardware configuration.
 
 Finally, review and update the following files as needed for your configuration.
 
@@ -106,7 +106,7 @@ To enable the AFC plugin in Moonraker, you should add the following lines to you
 [update_manager afc-software]
 type: git_repo
 path: ~/AFC-Klipper-Add-On
-origin: https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+origin: https://github.com/jackmiller1986/TurtlePulseCore-TPC.git
 managed_services: klipper
 primary_branch: main
 is_system_service: False
@@ -324,7 +324,7 @@ Make sure your stepper names are updated for variables: `variable_cut_current_st
 To remove the plugin, you can use the following commands:
 
 ```bash
-cd ~/AFC-Klipper-Add-On
+cd ~/TurtlePulseCore-TPC
 ./install-afc.sh
 ```
 
