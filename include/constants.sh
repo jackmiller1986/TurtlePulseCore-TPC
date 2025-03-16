@@ -19,7 +19,7 @@ klipper_venv="$HOME/klippy-env/bin"
 klipper_service="klipper"
 
 # Git related constants
-gitrepo="https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git"
+gitrepo="https://github.com/jackmiller1986/TurtlePulseCore-TPC.git"
 branch="main"
 
 # Misc constants
