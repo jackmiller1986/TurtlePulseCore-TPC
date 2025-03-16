@@ -69,16 +69,22 @@ install_menu() {
     choice="${choice^^}"
 
     case $choice in
-      T)
-        installation_type=$(
-          case "$installation_type" in
-            "BoxTurtle") echo "NightOwl" ;;
-            "NightOwl") echo "BoxTurtle" ;;
-            "TurtleCore") echo "TurtleCore" ;;
-          esac
-        )
-        message="Installation Type: $installation_type"
-        export message ;;
+    choice="${choice^^}"  # Konvertiere Eingabe zu Großbuchstaben
+
+    case $choice in
+        T)
+            installation_type=$(
+                case "$installation_type" in
+                    "BoxTurtle") echo "NightOwl" ;;
+                    "NightOwl") echo "TurtleCore" ;;
+                    "TurtleCore") echo "BoxTurtle" ;;
+                    *) echo "BoxTurtle" ;;  # Fallback für unerwartete Werte
+                esac
+            )
+            message="Installation Type: $installation_type"
+            ;;
+        
+
       1)
         afc_includes=$([ "$afc_includes" == "True" ] && echo "False" || echo "True")
         message="AFC Includes $([ "$afc_includes" == "True" ] && echo "Enabled" || echo "Disabled")"
