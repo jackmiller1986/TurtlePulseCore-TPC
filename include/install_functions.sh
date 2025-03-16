@@ -55,6 +55,14 @@ copy_unit_files() {
   if [ "$installation_type" == "BoxTurtle" ]; then
     cp "${afc_path}/templates/AFC_Hardware-AFC.cfg" "${afc_config_dir}/AFC_Hardware.cfg"
     cp "${afc_path}/templates/AFC_Turtle_1.cfg" "${afc_config_dir}/AFC_Turtle_1.cfg"
+  # If we are installing a Nightowl, then copy these files over.
+  elif [ "$installation_type" == "NightOwl" ]; then
+    cp "${afc_path}/templates/AFC_Hardware-NightOwl.cfg" "${afc_config_dir}/AFC_Hardware.cfg"
+    cp "${afc_path}/templates/AFC_NightOwl_1.cfg" "${afc_config_dir}/AFC_NightOwl_1.cfg"
+     # If we are installing a TurtleCore, then copy these files over.
+  elif [ "$installation_type" == "TurtleCore" ]; then
+    cp "${afc_path}/templates/AFC_Hardware-TurtleCore.cfg" "${afc_config_dir}/AFC_Hardware.cfg"
+    cp "${afc_path}/templates/AFC_TurtleCore_1.cfg" "${afc_config_dir}/AFC_NightOwl_1.cfg"
   fi
 }
 
@@ -107,9 +115,23 @@ install_afc() {
 - AFC Configuration updated with selected options at ${afc_file}
 
 - AFC-Klipper-Add-On python extensions installed to ${klipper_dir}/klippy/extras/
+  """
+if [ "$installation_type" == "BoxTurtle" ]; then
+  message+="""
 
 - Ensure you enter either your CAN bus or serial information in the ${afc_config_dir}/AFC_Turtle_1.cfg file
-"""
+  """
+elif [ "$installation_type" == "NightOwl" ]; then
+  message+="""
+
+- Ensure you enter either your CAN bus or serial information in the ${afc_config_dir}/AFC_NightOwl_1.cfg file
+  """
+elif [ "$installation_type" == "TurtleCore" ]; then
+  message+="""
+
+- Ensure you enter either your CAN bus or serial information in the ${afc_config_dir}/AFC_TurtleCore_1.cfg file
+  """
+fi
 if [ "$buffer_type" == "TurtleNeckV2" ]; then
   message+="""
 - Ensure you add the correct serial information to the ${afc_config_dir}/mcu/TurtleNeckv2.cfg file
