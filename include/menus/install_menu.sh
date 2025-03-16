@@ -66,9 +66,6 @@ install_menu() {
     echo ""
     read -p "Enter your choice: " choice
 
-    choice="${choice^^}"
-
-    case $choice in
     choice="${choice^^}"  # Konvertiere Eingabe zu Großbuchstaben
 
     case $choice in
