@@ -62,7 +62,7 @@ copy_unit_files() {
      # If we are installing a TurtleCore, then copy these files over.
   elif [ "$installation_type" == "TurtleCore" ]; then
     cp "${afc_path}/templates/AFC_Hardware-TurtleCore.cfg" "${afc_config_dir}/AFC_Hardware.cfg"
-    cp "${afc_path}/templates/AFC_TurtleCore_1.cfg" "${afc_config_dir}/AFC_NightOwl_1.cfg"
+    cp "${afc_path}/templates/AFC_TurtleCore_1.cfg" "${afc_config_dir}/AFC_TurtleCore_1.cfg"
   fi
 }
 
