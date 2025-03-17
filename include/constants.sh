@@ -53,7 +53,7 @@ moonraker_update_config="""
 [update_manager afc-software]
 type: git_repo
 path: ~/AFC-Klipper-Add-On
-origin: https://github.com/ArmoredTurtle/AFC-Klipper-Add-On
+origin: https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
 managed_services: $klipper_service
 primary_branch: main
 is_system_service: False
