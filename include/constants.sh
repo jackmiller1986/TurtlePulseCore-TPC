@@ -17,6 +17,7 @@ klipper_venv="$HOME/klippy-env/bin"
 
 # Service related constants
 klipper_service="klipper"
+moonraker_address="http://localhost"
 
 # Git related constants
 gitrepo="https://github.com/jackmiller1986/TurtlePulseCore-TPC.git"
