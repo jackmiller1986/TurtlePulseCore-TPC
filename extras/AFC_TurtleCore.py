@@ -33,4 +33,4 @@ class afcTurtleCore(afcBoxTurtle):
         self.logo_error = '<span class=error--text>TurtleCore Not Ready</span>\n'
 
 def load_config_prefix(config):
-    return afcTurtlecore(config)
+    return afcTurtleCore(config)
